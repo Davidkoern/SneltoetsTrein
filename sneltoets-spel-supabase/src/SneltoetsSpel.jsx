@@ -2,8 +2,8 @@
 import { useState, useEffect } from "react";
 import { createClient } from "@supabase/supabase-js";
 
-const SUPABASE_URL = "https://ckxisyabbptgiwsmwlkm.supabase.co"; // <-- aanpassen
-const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNreGlzeWFiYnB0Z2l3c213bGttIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTA2MjE1MTksImV4cCI6MjA2NjE5NzUxOX0.rLgV9I6MhQ5S8uEhBIr_hkE_rDiMizHs6XOSpmvrey8"; // <-- aanpassen
+const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
+const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY;
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 const opdrachten = [
